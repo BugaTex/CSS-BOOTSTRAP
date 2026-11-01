@@ -189,3 +189,31 @@ body {
   color: var(--bg-dark-base);
   transform: translateY(-3px);
 }
+/* ================= JUMBOTRON ================= */
+.jumbotron {
+  background-color: var(--bg-dark-card);
+}
+
+/* ================= ACCORDION (DARK THEME) ================= */
+.accordion-item {
+  border-radius: 4px !important;
+  overflow: hidden;
+}
+
+.accordion-button {
+  box-shadow: none !important;
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--color-gold) !important;
+  background-color: var(--bg-dark-card) !important;
+}
+
+.accordion-button::after {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(5deg);
+}
+
+.accordion-body {
+  background-color: var(--bg-dark-card);
+}
