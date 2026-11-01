@@ -1,0 +1,191 @@
+/* ================= DESIGN SYSTEM VARIABLES ================= */
+:root {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --color-gold: #d4af37;
+  --color-gold-hover: #f3cf65;
+  --bg-dark-base: #0b0f17;
+  --bg-dark-surface: #111723;
+  --bg-dark-card: #172030;
+  --border-gold-subtle: rgba(212, 175, 55, 0.2);
+  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ================= TYPOGRAPHY & BASE RESETS ================= */
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark-base);
+  color: #f0f4f8;
+  scroll-behavior: smooth;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.tracking-wider {
+  letter-spacing: 1.5px;
+}
+
+.tracking-widest {
+  letter-spacing: 3px;
+}
+
+.py-6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* ================= CUSTOM COLORS & BADGES ================= */
+.text-gold {
+  color: var(--color-gold) !important;
+}
+
+.bg-gold {
+  background-color: var(--color-gold) !important;
+}
+
+.bg-dark-surface {
+  background-color: var(--bg-dark-surface) !important;
+}
+
+.bg-card {
+  background-color: var(--bg-dark-card) !important;
+}
+
+.border-gold-subtle {
+  border-color: var(--border-gold-subtle) !important;
+}
+
+.divider-gold {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin-top: 1rem;
+}
+
+/* ================= BUTTONS ================= */
+.btn-gold {
+  background-color: var(--color-gold);
+  color: var(--bg-dark-base);
+  border: 1px solid var(--color-gold);
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+.btn-gold:hover {
+  background-color: var(--color-gold-hover);
+  color: var(--bg-dark-base);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background-color: rgba(11, 15, 23, 0.95) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: var(--transition-smooth);
+}
+
+.nav-link:hover, 
+.nav-link.active {
+  color: var(--color-gold) !important;
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+  background: linear-gradient(rgba(11, 15, 23, 0.75), rgba(11, 15, 23, 0.85)), 
+              url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  height: 85vh;
+  min-height: 600px;
+}
+
+/* ================= MENU CARDS ================= */
+.custom-card {
+  transition: var(--transition-smooth);
+  overflow: hidden;
+}
+
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4) !important;
+  border-color: var(--color-gold) !important;
+}
+
+.card-img-wrapper {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.card-img-wrapper img {
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.custom-card:hover .card-img-wrapper img {
+  transform: scale(1.08);
+}
+
+.price-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--bg-dark-base);
+  color: var(--color-gold);
+  border: 1px solid var(--border-gold-subtle);
+  padding: 0.35rem 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+/* ================= FORM STYLING ================= */
+.form-control-dark {
+  background-color: var(--bg-dark-base);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 0.85rem 1rem;
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+.form-control-dark:focus {
+  background-color: var(--bg-dark-base);
+  color: #ffffff;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+}
+
+/* ================= FOOTER & SOCIAL ICONS ================= */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-dark-card);
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-icon:hover {
+  background-color: var(--color-gold);
+  color: var(--bg-dark-base);
+  transform: translateY(-3px);
+}
